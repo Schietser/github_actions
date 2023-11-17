@@ -18,4 +18,12 @@ public class ExampleResourceTest {
                 .body(equalTo("Hello from RESTEasy Reactive"));
     }
 
+    @Test
+    public void testThatFails(){
+        RestAssured.given()
+                .when().get("/hello")
+                .then()
+                .statusCode(404);
+    }
+
 }
