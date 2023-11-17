@@ -23,7 +23,7 @@ public class ExampleResourceTest {
         RestAssured.given()
                 .when().get("/hello")
                 .then()
-                .statusCode(404);
+                .statusCode(200);
     }
 
 }
